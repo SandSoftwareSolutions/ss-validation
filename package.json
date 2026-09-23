@@ -1,0 +1,17 @@
+{
+  "name": "@sandsoftwaresolutions/validation",
+  "version": "0.1.0",
+  "description": "Composable, dependency-free validation helpers.",
+  "type": "module",
+  "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/index.js" } },
+  "files": ["src", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "engines": { "node": ">=18" },
+  "scripts": { "test": "node --test", "pack:check": "npm pack --dry-run" },
+  "keywords": ["validation", "validator", "forms", "utility"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/SandSoftwareSolutions/ss-validation.git" },
+  "bugs": { "url": "https://github.com/SandSoftwareSolutions/ss-validation/issues" },
+  "homepage": "https://github.com/SandSoftwareSolutions/ss-validation#readme",
+  "publishConfig": { "access": "public" }
+}
