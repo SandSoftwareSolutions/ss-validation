@@ -1,17 +1,54 @@
 {
   "name": "@sandsoftwaresolutions/validation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Composable, dependency-free validation helpers.",
   "type": "module",
-  "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/index.js" } },
-  "files": ["src", "README.md", "LICENSE"],
+  "main": "./dist/index.cjs",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./src/index.d.ts",
+        "default": "./src/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "src",
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "sideEffects": false,
-  "engines": { "node": ">=18" },
-  "scripts": { "test": "node --test", "pack:check": "npm pack --dry-run" },
-  "keywords": ["validation", "validator", "forms", "utility"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test && node scripts/build-cjs.mjs --check",
+    "pack:check": "npm pack --dry-run",
+    "build": "node scripts/build-cjs.mjs",
+    "prepack": "node scripts/build-cjs.mjs"
+  },
+  "keywords": [
+    "validation",
+    "validator",
+    "forms",
+    "utility"
+  ],
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/SandSoftwareSolutions/ss-validation.git" },
-  "bugs": { "url": "https://github.com/SandSoftwareSolutions/ss-validation/issues" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SandSoftwareSolutions/ss-validation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SandSoftwareSolutions/ss-validation/issues"
+  },
   "homepage": "https://github.com/SandSoftwareSolutions/ss-validation#readme",
-  "publishConfig": { "access": "public" }
+  "publishConfig": {
+    "access": "public"
+  }
 }

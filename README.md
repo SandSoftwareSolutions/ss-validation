@@ -10,6 +10,8 @@ Tiny, composable form and API-input validators with no runtime dependencies.
 npm install @sandsoftwaresolutions/validation
 ```
 
+Works with `import` and `require()`, and ships TypeScript types for both.
+
 ## Usage
 
 ```js
